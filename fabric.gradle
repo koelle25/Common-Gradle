@@ -29,6 +29,12 @@ repositories {
 		}
 	}
 
+	if (project.hasProperty("modMenuVersion")) {
+		maven {
+			url "https://maven.terraformersmc.com/"
+		}
+	}
+
 	if (project.hasProperty("autoConfigTOMLVersion")) {
 		maven {
 			url "https://jitpack.io"
@@ -46,7 +52,7 @@ dependencies {
 	}
 
 	if (project.hasProperty("modMenuVersion")) {
-		modImplementation "io.github.prospector:modmenu:${project.modMenuVersion}"
+		modImplementation "com.terraformersmc:modmenu:${project.modMenuVersion}"
 	}
 
 	if (project.hasProperty("clothConfigVersion")) {
