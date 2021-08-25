@@ -11,7 +11,7 @@ ext {
 	registerDefaultMavenPublication = false
 }
 
-apply from: "https://raw.githubusercontent.com/TheRandomLabs/Common-Gradle/$branch/build.gradle"
+apply from: "https://raw.githubusercontent.com/koelle25/Common-Gradle/${branch}/build.gradle"
 
 if (testMod) {
 	sourceSets {
