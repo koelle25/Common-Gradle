@@ -66,8 +66,8 @@ dependencies {
 	}
 
 	if (project.hasProperty("autoConfigTOMLVersion")) {
-		modImplementation "com.github.TheRandomLabs:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
-		include "com.github.TheRandomLabs:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
+		modImplementation "com.github.koelle25:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
+		include "com.github.koelle25:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
 	}
 
 	if (testMod) {
