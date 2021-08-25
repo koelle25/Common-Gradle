@@ -180,7 +180,7 @@ dependencies {
 	minecraft("net.minecraftforge:forge:${project.minecraftVersion}-${project.forgeVersion}")
 
 	if (project.hasProperty("clothConfigVersion")) {
-		compile(fg.deobf("me.shedaniel.cloth:cloth-config-forge:${project.clothConfigVersion}"))
+		implementation(fg.deobf("me.shedaniel.cloth:cloth-config-forge:${project.clothConfigVersion}"))
 	}
 
 	if (project.hasProperty("autoConfigVersion")) {
