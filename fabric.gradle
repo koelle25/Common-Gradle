@@ -25,7 +25,7 @@ if (testMod) {
 repositories {
 	if (project.hasProperty("clothConfigVersion")) {
 		maven {
-			url "https://dl.bintray.com/shedaniel/cloth-config-2"
+			url "https://maven.shedaniel.me/"
 		}
 	}
 
@@ -56,12 +56,12 @@ dependencies {
 	}
 
 	if (project.hasProperty("clothConfigVersion")) {
-		modImplementation("me.shedaniel.cloth:config-2:${project.clothConfigVersion}") {
-			exclude(module: "fabric-api")
+		modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothConfigVersion}") {
+			exclude(group: "net.fabricmc.fabric-api")
 		}
 
 		if (includeClothConfig) {
-			include "me.shedaniel.cloth:config-2:${project.clothConfigVersion}"
+			include "me.shedaniel.cloth:cloth-config-fabric:${project.clothConfigVersion}"
 		}
 	}
 
