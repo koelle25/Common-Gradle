@@ -15,7 +15,7 @@ ext {
 	autoConfigTOMLClassesDir = new File("build/autoconfig-toml")
 }
 
-apply from: "https://raw.githubusercontent.com/TheRandomLabs/Common-Gradle/$branch/build.gradle"
+apply from: "https://raw.githubusercontent.com/koelle25/Common-Gradle/$branch/build.gradle"
 
 //Apparently, this block also has to be in the main build script.
 buildscript {
@@ -206,11 +206,11 @@ dependencies {
 	}
 
 	if (project.hasProperty("autoConfigTOMLVersion")) {
-		compile "com.github.TheRandomLabs:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
-		nonModDependency "com.github.TheRandomLabs:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
+		compile "com.github.koelle25:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
+		nonModDependency "com.github.koelle25:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
 
 		if (!disableShadow) {
-			shadow "com.github.TheRandomLabs:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
+			shadow "com.github.koelle25:AutoConfig-TOML:${project.autoConfigTOMLVersion}"
 		}
 	}
 }
