@@ -20,14 +20,12 @@ apply from: "https://raw.githubusercontent.com/TheRandomLabs/Common-Gradle/$bran
 //Apparently, this block also has to be in the main build script.
 buildscript {
 	repositories {
-		jcenter()
-
 		mavenCentral()
 
 		gradlePluginPortal()
 
 		maven {
-			url "http://files.minecraftforge.net/maven"
+			url "https://files.minecraftforge.net/maven"
 		}
 
 		/* If useMixin:
@@ -40,9 +38,9 @@ buildscript {
 	dependencies {
 		classpath group: "net.minecraftforge.gradle", name: "ForgeGradle",
 				version: "3.+", changing: true
-		classpath "com.github.jengelman.gradle.plugins:shadow:4.0.4"
+		classpath "com.github.jengelman.gradle.plugins:shadow:7.0.0"
 		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.4.0"
-		classpath "gradle.plugin.com.modrinth.minotaur:Minotaur:1.2.0"
+		classpath "gradle.plugin.com.modrinth.minotaur:Minotaur:1.2.1"
 		//If useMixin:
 		//classpath "org.spongepowered:mixingradle:0.7-SNAPSHOT"
 	}
@@ -74,13 +72,13 @@ repositories {
 
 	if (project.hasProperty("clothConfigVersion")) {
 		maven {
-			url "https://dl.bintray.com/shedaniel/cloth-config-2"
+			url "https://maven.shedaniel.me/"
 		}
 	}
 
 	if (project.hasProperty("autoConfigVersion")) {
 		maven {
-			url "https://dl.bintray.com/shedaniel/autoconfig1u"
+			url "https://maven.shedaniel.me/"
 		}
 	}
 
