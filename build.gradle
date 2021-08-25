@@ -3,7 +3,7 @@ import org.gradle.util.GradleVersion
 
 def branch = project.findProperty("commonGradleBranch") ?: "main"
 def gradle4 = GradleVersion.current() < GradleVersion.version("5.0")
-def javaVersion = project.findProperty("javaVersion") ?: JavaVersion.VERSION_1_8
+def javaVersion = project.findProperty("javaVersion") ?: JavaVersion.VERSION_16
 def majorJavaVersion = javaVersion.getMajorVersion()
 def majorJavaVersionInt = majorJavaVersion.toInteger()
 def useSpotBugs = !project.hasProperty("useSpotBugs") || project.useSpotBugs
@@ -24,8 +24,6 @@ def registerDefaultMavenPublication = !project.hasProperty("registerDefaultMaven
 
 buildscript {
 	repositories {
-		jcenter()
-
 		mavenCentral()
 
 		gradlePluginPortal()
@@ -72,8 +70,6 @@ sourceCompatibility = javaVersion
 targetCompatibility = javaVersion
 
 repositories {
-	jcenter()
-
 	mavenCentral()
 }
 
