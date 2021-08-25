@@ -29,12 +29,6 @@ repositories {
 		}
 	}
 
-	if (project.hasProperty("autoConfigVersion")) {
-		maven {
-			url "https://dl.bintray.com/shedaniel/autoconfig1u"
-		}
-	}
-
 	if (project.hasProperty("autoConfigTOMLVersion")) {
 		maven {
 			url "https://jitpack.io"
@@ -62,16 +56,6 @@ dependencies {
 
 		if (includeClothConfig) {
 			include "me.shedaniel.cloth:cloth-config-fabric:${project.clothConfigVersion}"
-		}
-	}
-
-	if (project.hasProperty("autoConfigVersion")) {
-		modImplementation("me.sargunvohra.mcmods:autoconfig1u:${project.autoConfigVersion}") {
-			exclude(module: "fabric-api")
-		}
-
-		if (includeClothConfig) {
-			include "me.sargunvohra.mcmods:autoconfig1u:${project.autoConfigVersion}"
 		}
 	}
 
